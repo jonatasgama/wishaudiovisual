@@ -13,10 +13,10 @@ try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'p3plzcpnl487030.prod.phx3.secureserver.net';                     //Set the SMTP server to send through
+    $mail->Host       = '';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'contato@wishaudiovisual.com.br';                     //SMTP username
-    $mail->Password   = ".a7!XrW#PRys'SU";                               //SMTP password
+    $mail->Password   = '';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
