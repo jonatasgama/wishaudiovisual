@@ -1,0 +1,21 @@
+@media (min-width: 320px){
+	iframe{
+		width:345px;
+		height:155px;
+	}
+	
+	.subtexto{
+		display: none;
+	}
+}
+
+@media (min-width:1025px){
+	iframe{
+		width:560px;
+		height:315px;
+	}
+	
+	.subtexto{
+		display: block;
+	}
+}
