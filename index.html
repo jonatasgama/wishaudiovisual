@@ -640,7 +640,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3">
 
-                        <form name="sentMessage" id="sentMessage" class="contact-form" novalidate action="send.php" method="post">
+                        <form name="sentMessage" id="sentMessage" class="contact-form" novalidate>
                             <h3>entre em contato</h3>
                             <div class="row">
                                 <div class="col-md-12">
@@ -717,5 +717,20 @@
         <script src="rs-plugin/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
         <script src="rs-plugin/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>  
         <script src="js/template.js" type="text/javascript"></script>
+		<script>
+
+			sentMessage.onsubmit = async(e) =>{
+				e.preventDefault();
+
+				let response = await fetch('send.php',{
+					method: 'POST',
+					body: new FormData(sentMessage)
+				});
+
+				let result = await response;
+
+				sentMessage.reset;
+			}	
+		</script>	    
     </body>
 </html>
